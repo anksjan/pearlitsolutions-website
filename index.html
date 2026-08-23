@@ -3,998 +3,1228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pearl IT Solutions — Strategic IT Sourcing Partner</title>
-<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Pearl IT Solutions — Enterprise IT Distribution &amp; Procurement</title>
+<meta name="description" content="Pearl IT Solutions is one of India's trusted B2B distributors of genuine IT hardware, enterprise infrastructure, networking, storage and software licensing.">
+<meta name="author" content="Pearl IT Solutions">
+<meta property="og:title" content="Pearl IT Solutions — Enterprise IT Distribution">
+<meta property="og:description" content="Genuine IT products, enterprise infrastructure and custom procurement for businesses across India.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pearl IT Solutions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="keywords" content="IT distribution India, enterprise IT, server distributor, networking distributor, software licensing, IT procurement Bangalore, Pearl IT Solutions">
+<link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pearl IT Solutions",
+  "url": "https://www.pearlitsolutions.in",
+  "email": "sales@pearlitsolutions.in",
+  "telephone": "+91 9986861250",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 4/5-1, 4/18, Welcome Plaza, 3rd Floor, P.R. Lane",
+    "addressLocality": "Bangalore",
+    "postalCode": "560002",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  }
+}
+</script>
 <style>
-  :root{
-    --circuit-black:#d8dbe0;
-    --pcb-navy:#eef0f2;
-    --pcb-navy-2:#e2e5e9;
-    --trace-cyan:#9c7a1f;
-    --signal-amber:#8a5a2b;
-    --solder-silver:#4b4e55;
-    --live-green:#1f8a4c;
-    --silk-white:#16171a;
-    --line-dim: rgba(156,122,31,0.18);
-  }
+:root {
+  --navy: #0a2c6d;
+  --navy-deep: #061a42;
+  --brand-blue: #1e88e5;
+  --background: #ffffff;
+  --foreground: #1a2332;
+  --surface: #f8f9fc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --border: #e5e7ef;
+  --input: #e5e7ef;
+  --shadow-elevated: 0 20px 45px -25px rgba(10, 44, 109, 0.35);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.04), 0 8px 24px -12px rgba(0,0,0,0.08);
+  --radius: 1rem;
+  --container: 80rem;
+}
 
-  *{margin:0;padding:0;box-sizing:border-box;}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+h1, h2, h3, h4 { font-family: Manrope, sans-serif; letter-spacing: -0.02em; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button, input, textarea, select { font: inherit; }
 
-  html{scroll-behavior:smooth;}
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+.section { padding-block: 5rem; }
+.text-balance { text-wrap: balance; }
 
-  body{
-    background:var(--circuit-black);
-    color:var(--solder-silver);
-    font-family:'Inter',sans-serif;
-    overflow-x:hidden;
-    position:relative;
-  }
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--brand-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+}
+.section-head { max-width: 48rem; margin-inline: auto; text-align: center; }
+.section-head h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--navy);
+}
+.section-head p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
 
-  /* ---- PCB background texture ---- */
-  .pcb-bg{
-    position:fixed;
-    inset:0;
-    z-index:0;
-    background-image:
-      linear-gradient(var(--line-dim) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-dim) 1px, transparent 1px);
-    background-size:42px 42px;
-    opacity:0.35;
-    pointer-events:none;
-  }
-  .pcb-bg::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:radial-gradient(circle at 50% 0%, rgba(156,122,31,0.14), transparent 55%),
-               radial-gradient(circle at 90% 80%, rgba(255,255,255,0.5), transparent 45%);
-  }
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+  border-color: rgba(30, 136, 229, 0.4);
+}
 
-  section, header, footer{ position:relative; z-index:1; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  transition: filter 0.2s, background 0.2s, border-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--brand-blue);
+  color: #fff;
+  box-shadow: 0 12px 30px -10px rgba(30, 136, 229, 0.45);
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-outline {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); }
+.btn-navy {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: var(--shadow-card);
+}
+.btn-navy:hover { background: var(--brand-blue); }
 
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    font-size:0.72rem;
-    color:var(--trace-cyan);
-  }
+/* Header */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  background: rgba(10, 44, 109, 0.92);
+  backdrop-filter: saturate(140%) blur(10px);
+  transition: box-shadow 0.3s;
+}
+.site-header.scrolled { box-shadow: 0 8px 30px -15px rgba(0,0,0,0.4); }
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+@media (min-width: 768px) { .site-header .container { height: 5rem; } }
+.logo img {
+  height: 2.5rem;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+@media (min-width: 768px) { .logo img { height: 2.75rem; } }
 
-  h1,h2,h3{
-    font-family:'Space Grotesk', sans-serif;
-    color:var(--silk-white);
-    line-height:1.1;
-  }
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 0.15rem;
+}
+@media (min-width: 1024px) { .nav-desktop { display: flex; } }
+.nav-desktop a {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  border-radius: 0.375rem;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-desktop a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+.nav-cta-wrap { display: none; }
+@media (min-width: 1024px) { .nav-cta-wrap { display: flex; } }
 
-  .wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 32px;
-  }
+.menu-toggle {
+  display: flex;
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+@media (min-width: 1024px) { .menu-toggle { display: none; } }
 
-  a{color:inherit;text-decoration:none;}
+.mobile-nav {
+  display: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: var(--navy-deep);
+}
+.mobile-nav.open { display: block; }
+.mobile-nav .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-block: 1rem;
+  height: auto;
+}
+.mobile-nav a {
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  border-radius: 0.375rem;
+}
+.mobile-nav a:hover { background: rgba(255,255,255,0.05); color: #fff; }
+.mobile-nav .btn { margin-top: 0.5rem; justify-content: center; }
 
-  /* ---- Nav ---- */
-  nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    backdrop-filter:blur(10px);
-    background:rgba(216,219,224,0.85);
-    border-bottom:1px solid var(--line-dim);
-  }
-  nav .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height:72px;
-  }
-  .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:1.05rem;
-    color:var(--silk-white);
-  }
-  .logo-mark{
-    width:32px;height:32px;
-    display:block;
-    filter:drop-shadow(0 0 8px rgba(156,122,31,0.55));
-  }
-  .logo span{color:var(--trace-cyan);}
-  .footer-logo{
-    width:26px;height:26px;
-    vertical-align:middle;
-    margin-right:8px;
-    filter:drop-shadow(0 0 6px rgba(156,122,31,0.4));
-  }
-  .nav-links{
-    display:flex;
-    gap:36px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.78rem;
-    letter-spacing:0.04em;
-  }
-  .nav-links a{
-    color:var(--solder-silver);
-    position:relative;
-    padding:4px 0;
-    transition:color .2s;
-  }
-  .nav-links a:hover{color:var(--trace-cyan);}
-  .nav-cta{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.75rem;
-    border:1px solid var(--trace-cyan);
-    color:var(--trace-cyan);
-    padding:9px 18px;
-    border-radius:4px;
-    transition:all .2s;
-  }
-  .nav-cta:hover{background:var(--trace-cyan);color:var(--silk-white);}
+/* Hero */
+.hero {
+  position: relative;
+  padding-top: 4rem;
+  overflow: hidden;
+  background: var(--navy-deep);
+  color: #fff;
+}
+@media (min-width: 768px) { .hero { padding-top: 5rem; } }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(6,26,66,0.85), rgba(6,26,66,0.7), var(--navy-deep));
+}
+.hero-inner {
+  position: relative;
+  padding-block: 5rem 4rem;
+}
+@media (min-width: 768px) { .hero-inner { padding-block: 8rem 5rem; } }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+}
+.hero-badge span.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: var(--brand-blue);
+}
+.hero h1 {
+  margin-top: 1.5rem;
+  font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  max-width: 48rem;
+}
+.hero h1 .accent { color: var(--brand-blue); }
+.hero-lead {
+  margin-top: 1.5rem;
+  max-width: 42rem;
+  color: rgba(255,255,255,0.75);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+}
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.hero-stats {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .hero-stats { grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 5rem; }
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 1rem 1.25rem;
+}
+.stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: rgba(30, 136, 229, 0.2);
+  display: grid;
+  place-items: center;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+}
+.stat-card strong { font-size: 0.875rem; font-weight: 600; }
+@media (min-width: 768px) { .stat-card strong { font-size: 1rem; } }
 
-  /* ---- Hero ---- */
-  .hero{
-    padding:110px 0 90px;
-    text-align:center;
-    position:relative;
-  }
-  .hero .eyebrow{display:block;margin-bottom:22px;}
-  .hero h1{
-    font-size:clamp(2.4rem, 5.5vw, 4.4rem);
-    font-weight:700;
-    max-width:820px;
-    margin:0 auto 22px;
-  }
-  .hero h1 .accent{color:var(--trace-cyan);}
-  .hero p{
-    max-width:600px;
-    margin:0 auto 40px;
-    font-size:1.05rem;
-    color:var(--solder-silver);
-    opacity:0.85;
-  }
-  .hero-ctas{
-    display:flex;
-    gap:16px;
-    justify-content:center;
-    margin-bottom:70px;
-  }
-  .btn-primary{
-    background:var(--trace-cyan);
-    color:var(--silk-white);
-    font-weight:600;
-    font-family:'Space Grotesk',sans-serif;
-    padding:14px 30px;
-    border-radius:6px;
-    box-shadow:0 0 24px rgba(156,122,31,0.35);
-    transition:transform .2s, box-shadow .2s;
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(156,122,31,0.55);}
-  .btn-ghost{
-    border:1px solid rgba(75,78,85,0.25);
-    color:var(--solder-silver);
-    padding:14px 30px;
-    border-radius:6px;
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:600;
-    transition:border-color .2s, color .2s;
-  }
-  .btn-ghost:hover{border-color:var(--trace-cyan);color:var(--trace-cyan);}
+/* About */
+.about-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 1024px) { .about-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+.about-copy h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  color: var(--navy);
+}
+.about-copy p {
+  margin-top: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.about-image-wrap { position: relative; }
+.about-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  background: rgba(30, 136, 229, 0.1);
+  border-radius: 1.5rem;
+  filter: blur(32px);
+}
+.about-image-wrap img {
+  position: relative;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+}
+.features-grid {
+  margin-top: 5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+.feature-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem;
+}
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--brand-blue);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+.feature-card:hover .feature-icon {
+  background: var(--brand-blue);
+  color: #fff;
+}
+.feature-card h3 {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  color: var(--navy);
+}
+.feature-card p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
 
-  .trust-strip{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-  .pill{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-    letter-spacing:0.03em;
-    color:var(--solder-silver);
-    border:1px solid var(--line-dim);
-    background:rgba(238,240,242,0.7);
-    padding:8px 16px;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--live-green);box-shadow:0 0 6px var(--live-green);}
+/* Products */
+.products-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .products-grid { grid-template-columns: repeat(3, 1fr); } }
+.product-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.75rem;
+}
+.product-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.product-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+.product-card:hover .product-icon { background: var(--brand-blue); }
+.product-card h3 { font-size: 1.25rem; color: var(--navy); }
+.product-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 0.75rem;
+  list-style: none;
+}
+.product-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.product-list li svg { color: var(--brand-blue); flex-shrink: 0; }
 
-  /* ---- Circuit connector signature (between hero and next section) ---- */
-  .circuit-signature{
-    width:100%;
-    max-width:1000px;
-    margin:0 auto;
-    display:block;
-  }
-  .pulse{
-    fill:var(--trace-cyan);
-    filter:drop-shadow(0 0 6px var(--trace-cyan));
-  }
+/* Brands marquee */
+.brands-wrap { overflow: hidden; margin-top: 3.5rem; position: relative; }
+.brands-wrap::before,
+.brands-wrap::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: 6rem;
+  z-index: 2;
+  pointer-events: none;
+}
+.brands-wrap::before { left: 0; background: linear-gradient(to right, var(--surface), transparent); }
+.brands-wrap::after { right: 0; background: linear-gradient(to left, var(--surface), transparent); }
+.marquee {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.brand-tile {
+  flex-shrink: 0;
+  width: 13rem;
+  height: 6rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  display: grid;
+  place-items: center;
+  padding: 1rem 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.brand-tile:hover { border-color: var(--brand-blue); box-shadow: var(--shadow-card); }
+.brand-tile img { max-height: 2.5rem; max-width: 70%; object-fit: contain; }
+.brand-tile span { font-family: Manrope, sans-serif; font-weight: 700; font-size: 1.125rem; color: var(--navy); }
 
-  /* ---- Section shell ---- */
-  .section{padding:100px 0;}
-  .section-head{
-    max-width:640px;
-    margin-bottom:56px;
+/* Portfolio */
+.portfolio-block {
+  margin-top: 5rem;
+  padding-top: 1rem;
+}
+.portfolio-layout {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 1024px) { .portfolio-layout { grid-template-columns: 360px 1fr; } }
+.portfolio-rail {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .portfolio-rail {
+    flex-direction: column;
+    overflow: visible;
+    padding-bottom: 0;
   }
-  .section-head .eyebrow{margin-bottom:14px;}
-  .section-head h2{
-    font-size:clamp(1.8rem,3vw,2.6rem);
-    margin-bottom:14px;
-  }
-  .section-head p{
-    color:var(--solder-silver);
-    opacity:0.8;
-    font-size:1rem;
-    line-height:1.6;
-  }
-  .divider{
-    height:1px;
-    background:linear-gradient(90deg, var(--trace-cyan), transparent);
-    width:80px;
-    margin:20px 0 0;
-  }
+}
+.portfolio-tab {
+  flex-shrink: 0;
+  text-align: left;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--navy);
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.portfolio-tab.active {
+  border-color: transparent;
+  background: var(--navy);
+  color: #fff;
+  box-shadow: var(--shadow-elevated);
+}
+.portfolio-tab-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--brand-blue);
+}
+.portfolio-tab.active .portfolio-tab-icon {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+.portfolio-tab small {
+  display: none;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+@media (min-width: 1024px) { .portfolio-tab small { display: block; } }
+.portfolio-tab.active small { color: rgba(255,255,255,0.7); }
+.portfolio-panel {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1.75rem 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+.portfolio-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.portfolio-panel h3 { font-size: 1.5rem; color: var(--navy); }
+.portfolio-panel .blurb { margin-top: 0.375rem; font-size: 0.875rem; color: var(--muted); }
+.status-pill {
+  border-radius: 999px;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--brand-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+  white-space: nowrap;
+}
+.portfolio-items {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .portfolio-items { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1280px) { .portfolio-items { grid-template-columns: repeat(3, 1fr); } }
+.portfolio-item {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.875rem 1rem;
+  min-height: 4.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.875rem;
+}
+.portfolio-item-logo {
+  flex-shrink: 0;
+  width: 3.25rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-item img {
+  display: block;
+  max-height: 2.25rem;
+  max-width: 3.25rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.portfolio-item-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.8125rem;
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.portfolio-item.text-only {
+  padding-left: 1rem;
+}
+.portfolio-item.text-only .portfolio-item-name {
+  font-size: 0.9375rem;
+}
+.portfolio-note {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.portfolio-note svg { color: var(--brand-blue); flex-shrink: 0; }
 
-  /* ---- Overview grid ---- */
-  .overview-grid{
-    display:grid;
-    grid-template-columns:1.1fr 1fr;
-    gap:50px;
-    align-items:start;
-  }
-  .overview-copy p{
-    margin-bottom:18px;
-    line-height:1.75;
-    color:var(--solder-silver);
-  }
-  .overview-copy h3{
-    font-size:1.4rem;
-    margin-bottom:18px;
-  }
-  .value-cards{display:flex;flex-direction:column;gap:16px;}
-  .ic-card{
-    background:var(--pcb-navy);
-    border:1px solid var(--line-dim);
-    border-radius:10px;
-    padding:24px 26px;
-    position:relative;
-    transition:border-color .25s, transform .25s;
-  }
-  .ic-card:hover{border-color:var(--trace-cyan);transform:translateY(-3px);}
-  /* IC pin marks */
-  .ic-card::before, .ic-card::after{
-    content:"";
-    position:absolute;
-    width:14px;height:2px;
-    background:var(--trace-cyan);
-    opacity:0.6;
-    top:22px;
-  }
-  .ic-card::before{left:-14px;}
-  .ic-card::after{right:-14px;}
-  .ic-card h4{
-    font-family:'Space Grotesk',sans-serif;
-    color:var(--silk-white);
-    font-size:1.05rem;
-    margin-bottom:8px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .ic-card h4 .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.65rem;
-    color:var(--signal-amber);
-    border:1px solid rgba(138,90,43,0.45);
-    padding:2px 7px;
-    border-radius:3px;
-  }
-  .ic-card p{
-    font-size:0.92rem;
-    line-height:1.6;
-    color:var(--solder-silver);
-    opacity:0.85;
-  }
+/* Industries */
+.industries-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 640px) { .industries-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .industries-grid { grid-template-columns: repeat(4, 1fr); } }
+.industry-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.industry-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background: rgba(30, 136, 229, 0.1);
+  color: var(--brand-blue);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+.industry-card:hover .industry-icon { background: var(--brand-blue); color: #fff; }
+.industry-card strong { font-size: 0.875rem; color: var(--navy); }
+@media (min-width: 768px) { .industry-card strong { font-size: 1rem; } }
 
-  /* ---- Services / component grid ---- */
-  .services{background:var(--pcb-navy-2);}
-  .service-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:26px;
-  }
-  .chip{
-    background:var(--pcb-navy);
-    border:1px solid var(--line-dim);
-    border-radius:12px;
-    padding:30px 26px;
-    position:relative;
-    overflow:hidden;
-    transition:transform .25s, border-color .25s, box-shadow .25s;
-  }
-  .chip:hover{
-    transform:translateY(-4px);
-    border-color:var(--trace-cyan);
-    box-shadow:0 12px 30px rgba(156,122,31,0.16);
-  }
-  .chip-num{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.7rem;
-    color:var(--trace-cyan);
-    opacity:0.7;
-    margin-bottom:16px;
-    display:block;
-  }
-  .chip-icon{
-    width:44px;height:44px;
-    border:1px solid var(--trace-cyan);
-    border-radius:8px;
-    display:flex;align-items:center;justify-content:center;
-    margin-bottom:18px;
-    font-size:1.3rem;
-    color:var(--trace-cyan);
-    box-shadow:0 0 14px rgba(156,122,31,0.3) inset;
-  }
-  .chip h3{font-size:1.15rem;margin-bottom:12px;}
-  .chip ul{list-style:none;}
-  .chip li{
-    font-size:0.88rem;
-    color:var(--solder-silver);
-    opacity:0.82;
-    padding-left:16px;
-    position:relative;
-    margin-bottom:8px;
-    line-height:1.4;
-  }
-  .chip li::before{
-    content:"";
-    position:absolute;
-    left:0;top:7px;
-    width:6px;height:1.5px;
-    background:var(--signal-amber);
-  }
+/* Process */
+.process {
+  background: var(--navy-deep);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.process::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0);
+  background-size: 32px 32px;
+}
+.process .container { position: relative; }
+.process-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .process-grid { grid-template-columns: repeat(4, 1fr); } }
+.process-step {
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+}
+.process-step .num {
+  font-family: Manrope, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+}
+.process-step strong { display: block; margin-top: 0.75rem; }
 
-  /* ---- Brand matrix ---- */
-  .matrix-scroll{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:18px;
-  }
-  .matrix-col{
-    background:var(--pcb-navy);
-    border:1px solid var(--line-dim);
-    border-radius:10px;
-    overflow:hidden;
-  }
-  .matrix-col-head{
-    background:linear-gradient(135deg, rgba(156,122,31,0.18), rgba(156,122,31,0.03));
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.68rem;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    color:var(--trace-cyan);
-    padding:14px 12px;
-    border-bottom:1px solid var(--line-dim);
-  }
-  .matrix-col-body{padding:10px;}
-  .matrix-item{
-    font-size:0.82rem;
-    color:var(--solder-silver);
-    padding:9px 8px;
-    border-bottom:1px dashed rgba(75,78,85,0.15);
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .matrix-item:last-child{border-bottom:none;}
-  .brand-badge{
-    width:24px;height:24px;
-    flex-shrink:0;
-    background:#fff;
-    border-radius:6px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:4px;
-    box-shadow:0 0 8px rgba(156,122,31,0.18);
-  }
-  .brand-badge img{
-    width:100%;height:100%;
-    object-fit:contain;
-    display:block;
-  }
+/* Counters */
+.counters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) { .counters-grid { grid-template-columns: repeat(5, 1fr); gap: 1rem; } }
+.counter-value {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 700;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+.counter-value .suffix { color: var(--brand-blue); }
+.counter-label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+@media (min-width: 768px) { .counter-label { font-size: 1rem; } }
+.counter-pan { grid-column: span 2; }
+@media (min-width: 768px) { .counter-pan { grid-column: span 1; } }
 
-  /* ---- Profile / metrics ---- */
-  .profile{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-  }
-  .reg-table{
-    background:var(--pcb-navy);
-    border:1px solid var(--line-dim);
-    border-radius:12px;
-    overflow:hidden;
-  }
-  .reg-row{
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    padding:16px 22px;
-    border-bottom:1px solid rgba(75,78,85,0.12);
-    font-size:0.9rem;
-  }
-  .reg-row:last-child{border-bottom:none;}
-  .reg-row .k{
-    font-family:'IBM Plex Mono',monospace;
-    color:var(--trace-cyan);
-    font-size:0.78rem;
-    flex-shrink:0;
-  }
-  .reg-row .v{color:var(--solder-silver);text-align:right;}
-  .metric-cards{display:flex;flex-direction:column;gap:18px;}
-  .metric-card{
-    border:1px solid var(--line-dim);
-    background:var(--pcb-navy);
-    border-radius:10px;
-    padding:22px 24px;
-  }
-  .metric-card h4{
-    font-family:'Space Grotesk',sans-serif;
-    color:var(--silk-white);
-    font-size:1rem;
-    margin-bottom:10px;
-  }
-  .metric-card p{font-size:0.88rem;color:var(--solder-silver);opacity:0.85;line-height:1.6;}
+/* Import */
+.import {
+  background: var(--navy-deep);
+  color: #fff;
+  overflow: hidden;
+}
+.import-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 1024px) { .import-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+.import-image { position: relative; order: 2; }
+@media (min-width: 1024px) { .import-image { order: 1; } }
+.import-image::before {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  background: rgba(30, 136, 229, 0.2);
+  border-radius: 1.5rem;
+  filter: blur(32px);
+}
+.import-image img {
+  position: relative;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+}
+.import-copy { order: 1; }
+@media (min-width: 1024px) { .import-copy { order: 2; } }
+.import-copy h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.875rem, 4vw, 3rem);
+}
+.import-copy p {
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+.import-copy .eyebrow-pill { background: rgba(30, 136, 229, 0.2); }
 
-  .alliances{
-    margin-top:70px;
-    text-align:center;
-  }
-  .alliances .eyebrow{display:block;margin-bottom:24px;}
-  .alliance-row{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:14px;
-  }
-  .alliance-chip{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.78rem;
-    color:var(--solder-silver);
-    border:1px solid var(--line-dim);
-    padding:9px 20px 9px 12px;
-    border-radius:6px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
+/* Teaser */
+.teaser {
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) { .teaser { height: 18rem; } }
+.teaser img { width: 100%; height: 100%; object-fit: cover; }
+.teaser-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 26, 66, 0.7);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.teaser-overlay h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: #fff;
+  max-width: 48rem;
+}
 
-  /* ---- Contact ---- */
-  .contact{
-    background:var(--pcb-navy-2);
-  }
-  .contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:26px;
-    align-items:stretch;
-  }
-  .contact-card{
-    background:var(--pcb-navy);
-    border:1px solid var(--line-dim);
-    border-radius:12px;
-    padding:32px;
-  }
-  .contact-card .eyebrow{display:block;margin-bottom:16px;}
-  .contact-card h3{font-size:1.2rem;margin-bottom:20px;}
-  .contact-row{
-    display:flex;
-    gap:12px;
-    align-items:baseline;
-    margin-bottom:12px;
-    font-size:0.92rem;
-  }
-  .contact-row .k{font-family:'IBM Plex Mono',monospace;color:var(--trace-cyan);font-size:0.72rem;min-width:70px;}
-  .contact-stack{
-    display:grid;
-    gap:26px;
-  }
-  .map-card{
-    overflow:hidden;
-    padding:16px;
-  }
-  .map-frame{
-    height:280px;
-    border:0;
-    width:100%;
-    display:block;
-    filter:grayscale(0.15) contrast(1.02);
-  }
-  .map-copy{
-    padding:26px 28px 28px;
-  }
-  .map-copy p{
-    color:var(--solder-silver);
-    opacity:0.84;
-    line-height:1.65;
-    margin-bottom:18px;
-  }
-  .inline-link{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.78rem;
-    color:var(--trace-cyan);
-  }
-  .contact-form-card{
-    display:flex;
-    flex-direction:column;
-  }
-  .contact-form-copy{
-    margin-bottom:8px;
-  }
-  .contact-form-copy h3{
-    margin-bottom:12px;
-  }
-  .contact-form-note{
-    font-size:0.82rem;
-    line-height:1.6;
-    color:var(--solder-silver);
-    opacity:0.75;
-    margin-bottom:22px;
-  }
-  .contact-form{
-    display:grid;
-    gap:16px;
-  }
-  .form-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-  }
-  .form-field{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-  }
-  .form-field label{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.68rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--trace-cyan);
-  }
-  .form-field input,
-  .form-field select,
-  .form-field textarea{
-    width:100%;
-    padding:12px 14px;
-    border:1px solid var(--line-dim);
-    border-radius:8px;
-    background:rgba(238,240,242,0.75);
-    color:var(--silk-white);
-    font-family:'Inter',sans-serif;
-    font-size:0.92rem;
-    transition:border-color .2s, box-shadow .2s;
-  }
-  .form-field input::placeholder,
-  .form-field textarea::placeholder{
-    color:rgba(75,78,85,0.55);
-  }
-  .form-field input:focus,
-  .form-field select:focus,
-  .form-field textarea:focus{
-    outline:none;
-    border-color:var(--trace-cyan);
-    box-shadow:0 0 0 3px rgba(156,122,31,0.15);
-  }
-  .form-field textarea{
-    min-height:120px;
-    resize:vertical;
-  }
-  .form-submit{
-    margin-top:4px;
-    width:100%;
-    padding:14px 24px;
-    border:0;
-    border-radius:8px;
-    background:var(--trace-cyan);
-    color:var(--silk-white);
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:600;
-    font-size:0.95rem;
-    cursor:pointer;
-    box-shadow:0 0 20px rgba(156,122,31,0.3);
-    transition:transform .2s, box-shadow .2s, opacity .2s;
-  }
-  .form-submit:hover:not(:disabled){
-    transform:translateY(-2px);
-    box-shadow:0 0 28px rgba(156,122,31,0.45);
-  }
-  .form-submit:disabled{
-    opacity:0.65;
-    cursor:not-allowed;
-  }
-  .form-result{
-    min-height:1.2em;
-    font-size:0.88rem;
-    line-height:1.5;
-    text-align:center;
-  }
-  .form-result.success{color:var(--live-green);}
-  .form-result.error{color:#b42318;}
-  @media(max-width:600px){
-    .form-row{grid-template-columns:1fr;}
-  }
+/* Testimonials */
+.testimonials-grid {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+.testimonial-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-card .quote-mark {
+  font-family: Manrope, sans-serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  color: rgba(30, 136, 229, 0.3);
+}
+.testimonial-card blockquote {
+  margin-top: -1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.6;
+}
+.testimonial-meta {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.testimonial-meta strong { color: var(--navy); }
+.testimonial-meta span { display: block; font-size: 0.875rem; color: var(--muted); margin-top: 0.15rem; }
 
-  footer{
-    padding:36px 0;
-    border-top:1px solid var(--line-dim);
-    text-align:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:0.72rem;
-    color:rgba(75,78,85,0.7);
-  }
-  footer .wrap{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:2px;
-  }
+/* Contact */
+.contact-layout {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 1024px) { .contact-layout { grid-template-columns: 3fr 2fr; } }
+.contact-form-wrap {
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1.5rem 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+@media (max-width: 640px) { .contact-form-wrap { padding: 1.5rem; } }
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) { .form-grid.two { grid-template-columns: repeat(2, 1fr); } }
+.form-field label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.375rem;
+}
+.form-field label .req { color: var(--brand-blue); }
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--input);
+  background: var(--background);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  outline: none;
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+}
+.form-result {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  display: none;
+}
+.form-result.show { display: block; }
+.form-result.success {
+  background: rgba(30, 136, 229, 0.1);
+  border: 1px solid rgba(30, 136, 229, 0.3);
+  color: var(--navy);
+}
+.form-result.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+.form-field select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% + 2px), calc(100% - 12px) calc(50% + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+.contact-side { display: flex; flex-direction: column; gap: 1.25rem; }
+.info-card {
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background: var(--navy);
+  color: #fff;
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+.info-card h3 { font-size: 1.5rem; }
+.info-rows { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.info-row { display: flex; gap: 0.75rem; font-size: 0.875rem; }
+.info-row-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  color: var(--brand-blue);
+  flex-shrink: 0;
+}
+.info-row kbd {
+  display: block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+.info-row a:hover { color: var(--brand-blue); }
+.map-wrap {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 3;
+}
+.map-wrap iframe { width: 100%; height: 100%; border: 0; }
 
-  @media(max-width:900px){
-    .nav-links{display:none;}
-    .overview-grid, .profile, .contact-grid{grid-template-columns:1fr;}
-    .service-grid{grid-template-columns:1fr 1fr;}
-  }
-  @media(max-width:600px){
-    .service-grid{grid-template-columns:1fr;}
-    .hero-ctas{flex-direction:column;align-items:center;}
-  }
+/* Footer */
+.site-footer {
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.8);
+}
+.footer-grid {
+  padding-block: 4rem;
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(4, 1fr); } }
+.footer-grid p { margin-top: 1rem; font-size: 0.875rem; line-height: 1.7; }
+.footer-social { margin-top: 1.5rem; display: flex; gap: 0.75rem; }
+.footer-social a {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+.footer-social a:hover { background: var(--brand-blue); }
+.footer-grid h4 { color: #fff; font-size: 1rem; }
+.footer-links { margin-top: 1rem; list-style: none; }
+.footer-links li { margin-top: 0.5rem; font-size: 0.875rem; }
+.footer-links a:hover { color: var(--brand-blue); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-block: 1.5rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+}
 
-  @media (prefers-reduced-motion: reduce){
-    * { animation:none !important; transition:none !important; }
-  }
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .card-hover:hover { transform: none; }
+}
 </style>
 </head>
 <body>
 
-<div class="pcb-bg"></div>
-
-<nav>
-  <div class="wrap">
-    <div class="logo"><img class="logo-mark" src="data:image/png;base64,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" alt="Pearl IT Solutions logo">PEARL<span>&nbsp;IT SOLUTIONS</span></div>
-    <div class="nav-links">
-      <a href="#overview">Overview</a>
-      <a href="#services">Portfolio</a>
+<header class="site-header" id="site-header">
+  <div class="container">
+    <a href="#home" class="logo">
+      <img src="assets/favicon.png" alt="Pearl IT Solutions" width="300" height="60">
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
       <a href="#brands">Brands</a>
-      <a href="#profile">Profile</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#industries">Industries</a>
+      <a href="#import">Import &amp; Procurement</a>
       <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta-wrap">
+      <a href="#contact" class="btn btn-primary">Get a Quote <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></a>
     </div>
-    <a href="#contact" class="nav-cta">Request Quote</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <i data-lucide="menu" id="menu-icon-open" style="width:1.5rem;height:1.5rem"></i>
+    </button>
   </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <span class="eyebrow">// Strategic IT Sourcing · Est. 2025 · Bangalore</span>
-    <h1>Enterprise hardware, <span class="accent">wired straight</span> into your supply chain.</h1>
-    <p>Genuine IT hardware, global custom sourcing, and certified licensing — delivered pan-India with the reliability of a closed circuit.</p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn-primary">Talk to Sourcing Desk</a>
-      <a href="#services" class="btn-ghost">View Capabilities</a>
-    </div>
-    <div class="trust-strip">
-      <span class="pill"><span class="dot"></span>Genuine Products</span>
-      <span class="pill"><span class="dot"></span>Timely Delivery</span>
-      <span class="pill"><span class="dot"></span>Competitive Pricing</span>
-      <span class="pill"><span class="dot"></span>Expert Technical Support</span>
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="container">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#brands">Brands</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#industries">Industries</a>
+      <a href="#import">Import &amp; Procurement</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">Get a Quote <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></a>
     </div>
   </div>
-
-  <svg class="circuit-signature" viewBox="0 0 1000 90" style="margin-top:70px;">
-    <path id="tracePath" d="M0,45 L120,45 L150,15 L280,15 L310,45 L430,45 L460,75 L560,75 L590,45 L720,45 L750,15 L860,15 L890,45 L1000,45"
-      fill="none" stroke="#9c7a1f" stroke-width="1.5" opacity="0.35"/>
-    <circle r="18" fill="none" stroke="#9c7a1f" stroke-width="1" opacity="0.5" cx="150" cy="15"/>
-    <circle r="18" fill="none" stroke="#8a5a2b" stroke-width="1" opacity="0.5" cx="460" cy="75"/>
-    <circle r="18" fill="none" stroke="#9c7a1f" stroke-width="1" opacity="0.5" cx="750" cy="15"/>
-    <circle class="pulse" r="5">
-      <animateMotion dur="4.5s" repeatCount="indefinite" path="M0,45 L120,45 L150,15 L280,15 L310,45 L430,45 L460,75 L560,75 L590,45 L720,45 L750,15 L860,15 L890,45 L1000,45"/>
-    </circle>
-  </svg>
 </header>
 
-<section class="section" id="overview">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">01 / Company Overview</span>
-      <h2>Your single-window procurement partner</h2>
-      <div class="divider"></div>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80" alt="Abstract enterprise technology background" width="1920" height="1080">
     </div>
-    <div class="overview-grid">
-      <div class="overview-copy">
-        <h3>Built for corporate, industrial &amp; gifting supply chains</h3>
-        <p>Pearl IT Solutions is a trusted IT supply and solutions provider serving corporate clients, industrial sectors, and gifting markets across India. We source and deliver genuine IT products, hardware, and customized solutions — including premium items not usually available through standard Indian supply channels.</p>
-        <p>Our commitment is to lower operating friction for businesses by acting as a swift, single-window procurement partner, ensuring critical tech assets are securely configured and shipped without delay.</p>
+    <div class="container hero-inner reveal">
+      <div class="hero-badge"><span class="dot"></span> Trusted B2B IT Distribution Partner</div>
+      <h1 class="text-balance">Empowering Businesses with <span class="accent">Genuine IT Solutions</span></h1>
+      <p class="hero-lead">Pearl IT Solutions is one of India's trusted distributors of IT hardware, enterprise infrastructure, networking, storage, memory, software licensing and custom technology procurement.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Quote <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></a>
+        <a href="#contact" class="btn btn-outline">Talk to Our Experts</a>
       </div>
-      <div class="value-cards">
-        <div class="ic-card">
-          <h4>Mission <span class="tag">CORE</span></h4>
-          <p>Deliver world-class IT products that empower organizations through innovation, extreme reliability, and customer-centric operational excellence.</p>
-        </div>
-        <div class="ic-card">
-          <h4>Vision <span class="tag">GOAL</span></h4>
-          <p>Be the preferred technology partner recognized across India for sheer excellence, high product availability, and dependable service delivery.</p>
-        </div>
-        <div class="ic-card">
-          <h4>Core Values <span class="tag">SIGNAL</span></h4>
-          <p>Integrity in every transaction · customer-first culture · quality commitment · constant innovation and speed.</p>
-        </div>
+      <div class="hero-stats">
+        <div class="stat-card card-hover"><div class="stat-icon"><i data-lucide="check-circle-2" style="width:1.25rem;height:1.25rem"></i></div><strong>Genuine Products</strong></div>
+        <div class="stat-card card-hover"><div class="stat-icon"><i data-lucide="truck" style="width:1.25rem;height:1.25rem"></i></div><strong>Pan India Distribution</strong></div>
+        <div class="stat-card card-hover"><div class="stat-icon"><i data-lucide="headphones" style="width:1.25rem;height:1.25rem"></i></div><strong>Enterprise Support</strong></div>
+        <div class="stat-card card-hover"><div class="stat-icon"><i data-lucide="award" style="width:1.25rem;height:1.25rem"></i></div><strong>Authorized Partners</strong></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section services" id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">02 / Core Capabilities</span>
-      <h2>A full circuit of products &amp; services</h2>
-      <p>From physical hardware to licensing and custom sourcing, every capability plugs into the next — a complete supply chain, not a patchwork of vendors.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="service-grid">
-      <div class="chip">
-        <span class="chip-num">CH.01</span>
-        <div class="chip-icon">▤</div>
-        <h3>IT Hardware Supply</h3>
-        <ul>
-          <li>Servers, storage &amp; workstations</li>
-          <li>Enterprise laptops &amp; desktops</li>
-          <li>Heavy-duty printers &amp; scanners</li>
-          <li>Power backups &amp; industrial UPS</li>
-        </ul>
+  <section class="section" id="about" style="background:var(--surface)">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-copy">
+          <span class="eyebrow-pill">Who We Are</span>
+          <h2 class="text-balance">A trusted IT distribution and procurement partner for India's enterprises.</h2>
+          <p>Pearl IT Solutions is a trusted IT distributor and procurement partner serving businesses, resellers, system integrators and enterprise procurement teams across India.</p>
+          <p>We specialize in delivering genuine IT products, enterprise hardware, networking infrastructure, storage solutions, software licensing and customized procurement services.</p>
+          <p>Our mission is to make IT procurement smarter, faster, seamless and profitable — while ensuring competitive pricing, authentic products and dependable supply chain support.</p>
+        </div>
+        <div class="about-image-wrap">
+          <img src="assets/about-team.jpg" alt="Enterprise team reviewing IT dashboards" loading="lazy" width="1200" height="800">
+        </div>
       </div>
-      <div class="chip">
-        <span class="chip-num">CH.02</span>
-        <div class="chip-icon">⚿</div>
-        <h3>Software Licensing</h3>
-        <ul>
-          <li>Microsoft licensing &amp; cloud</li>
-          <li>Multi-platform OS deployments</li>
-          <li>Next-gen security &amp; antivirus</li>
-          <li>Enterprise productivity suites</li>
-        </ul>
-      </div>
-      <div class="chip">
-        <span class="chip-num">CH.03</span>
-        <div class="chip-icon">⌁</div>
-        <h3>Networking &amp; Infra</h3>
-        <ul>
-          <li>Enterprise switches, routers &amp; APs</li>
-          <li>End-to-end structured cabling</li>
-          <li>Commercial Wi-Fi &amp; connectivity</li>
-        </ul>
-      </div>
-      <div class="chip">
-        <span class="chip-num">CH.04</span>
-        <div class="chip-icon">◎</div>
-        <h3>Special Procurement</h3>
-        <ul>
-          <li>Global custom sourcing &amp; imports</li>
-          <li>Hard-to-find end-of-life spares</li>
-          <li>Specialized enterprise hardware</li>
-          <li>Direct coordination with OEMs</li>
-        </ul>
-      </div>
-      <div class="chip">
-        <span class="chip-num">CH.05</span>
-        <div class="chip-icon">◈</div>
-        <h3>Corporate Gifting</h3>
-        <ul>
-          <li>Customized corporate gifts</li>
-          <li>Employee kits &amp; celebrations</li>
-          <li>Promotional tech accessories</li>
-          <li>Premium branded travel gear</li>
-        </ul>
-      </div>
-      <div class="chip">
-        <span class="chip-num">CH.06</span>
-        <div class="chip-icon">⚙</div>
-        <h3>Consulting &amp; Support</h3>
-        <ul>
-          <li>Strategic procurement advising</li>
-          <li>Deployment &amp; configuration</li>
-          <li>Prompt post-sale support</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="brands">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">03 / Sourcing Matrix</span>
-      <h2>Brand &amp; product verticals we route through</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="matrix-scroll">
-      <div class="matrix-col">
-        <div class="matrix-col-head">Desktop / Server</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item">Assembled</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hp.svg" alt="" onerror="this.parentElement.style.display='none'"></span>HP Systems</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/lenovo.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Lenovo Think Series</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/dell.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Dell Business</div>
+      <div id="portfolio" class="portfolio-block">
+        <div class="section-head reveal">
+          <span class="eyebrow-pill">Portfolio</span>
+          <h2>Exactly what we stock, brand by brand.</h2>
+          <p>Select a category to see the specific brands and product lines Pearl IT actively distributes.</p>
+        </div>
+        <div class="portfolio-layout reveal">
+          <div class="portfolio-rail" id="portfolio-rail" role="tablist" aria-label="Portfolio categories"></div>
+          <div class="portfolio-panel" id="portfolio-panel" role="tabpanel"></div>
         </div>
       </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">NAS Box</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/synology.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Synology Network Storage</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qnap.svg" alt="" onerror="this.parentElement.style.display='none'"></span>QNAP Enterprise NAS</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/asustor.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Asustor</div>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">Enterprise HDD</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/western-digital.svg" alt="" onerror="this.parentElement.style.display='none'"></span>WD Ultrastar</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seagate.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Seagate Exos Series</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/toshiba.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Toshiba</div>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">NAS HDD</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/western-digital.svg" alt="" onerror="this.parentElement.style.display='none'"></span>WD Red NAS Storage</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seagate.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Seagate IronWolf</div>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">Enterprise SSD</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/samsung.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Samsung Enterprise SSD</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/phison.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Phison</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sandisk.svg" alt="" onerror="this.parentElement.style.display='none'"></span>SanDisk Enterprise</div>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">NVIDIA GPU</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nvidia.svg" alt="" onerror="this.parentElement.style.display='none'"></span>GeForce RTX &amp; GTX</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nvidia.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Professional GPUs</div>
-        </div>
-      </div>
-      <div class="matrix-col">
-        <div class="matrix-col-head">Professional HDD</div>
-        <div class="matrix-col-body">
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sandisk.svg" alt="" onerror="this.parentElement.style.display='none'"></span>SanDisk G-Drive</div>
-          <div class="matrix-item"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/lacie.svg" alt="" onerror="this.parentElement.style.display='none'"></span>LaCie</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="profile">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">04 / Corporate Profile</span>
-      <h2>Registration &amp; operational metrics</h2>
-      <div class="divider"></div>
-    </div>
-    <div class="profile">
-      <div class="reg-table">
-        <div class="reg-row"><span class="k">ESTABLISHED</span><span class="v">2025</span></div>
-        <div class="reg-row"><span class="k">STRUCTURE</span><span class="v">Proprietorship</span></div>
-        <div class="reg-row"><span class="k">GST NUMBER</span><span class="v">29AOSPK9548M1ZQ</span></div>
-        <div class="reg-row"><span class="k">HEAD OFFICE</span><span class="v">Lead Tech It World, Welcome Plaza, 4/5-1, Shop No 4/18, 3rd Floor, PR Lane, Sadar Patrappa Rd, 3rd Cross, Bengaluru, Karnataka 560002</span></div>
-        <div class="reg-row"><span class="k">LEADERSHIP</span><span class="v">Managed by experienced IT veterans with global logistics &amp; physical infra expertise</span></div>
+      <div class="section-head reveal" style="margin-top:5rem">
+        <span class="eyebrow-pill">Why Choose Pearl IT</span>
+        <h2>Enterprise-grade distribution, end to end.</h2>
       </div>
-      <div class="metric-cards">
-        <div class="metric-card">
-          <h4>Operations Highlight</h4>
-          <p><strong style="color:var(--trace-cyan);">Catered client base:</strong> serving leading corporate and industrial partners.<br><strong style="color:var(--trace-cyan);">Global network:</strong> fast supply chain channels direct to global brands.<br><strong style="color:var(--trace-cyan);">Logistics protocol:</strong> integrated tracking with safety transit compliance.</p>
-        </div>
-        <div class="metric-card">
-          <h4>Future Outlook</h4>
-          <p>Pearl IT Solutions is scaling to execute campus network setups, smart office workspace automation, high-availability cloud hosting, and expanding pan-India distribution channels.</p>
-        </div>
+      <div class="features-grid">
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="check-circle-2"></i></div><h3>Genuine Products</h3><p>Only authentic products sourced through authorized channels.</p></article>
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="trending-up"></i></div><h3>Competitive Pricing</h3><p>Best commercial pricing for businesses and resellers.</p></article>
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="truck"></i></div><h3>Reliable Supply Chain</h3><p>Fast procurement and nationwide delivery.</p></article>
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="building-2"></i></div><h3>Enterprise Expertise</h3><p>Solutions tailored for SMBs and large enterprises.</p></article>
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="globe-2"></i></div><h3>Custom Procurement</h3><p>Global sourcing for hard-to-find electronic products.</p></article>
+        <article class="feature-card card-hover reveal"><div class="feature-icon"><i data-lucide="headphones"></i></div><h3>Dedicated Support</h3><p>Consultation before and after purchase.</p></article>
       </div>
     </div>
+  </section>
 
-    <div class="alliances">
-      <span class="eyebrow">Trusted Technology Alliances</span>
-      <div class="alliance-row">
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/dell.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Dell</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hpe.svg" alt="" onerror="this.parentElement.style.display='none'"></span>HPE</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/lenovo.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Lenovo</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hp.svg" alt="" onerror="this.parentElement.style.display='none'"></span>HP</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aruba-networks.svg" alt="" onerror="this.parentElement.style.display='none'"></span>Aruba</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/western-digital.svg" alt="" onerror="this.parentElement.style.display='none'"></span>WD</span>
-        <span class="alliance-chip"><span class="brand-badge"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sandisk.svg" alt="" onerror="this.parentElement.style.display='none'"></span>SanDisk</span>
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill">Products</span>
+        <h2>A complete portfolio, one distribution partner.</h2>
+        <p>From individual components to full enterprise infrastructure — Pearl IT distributes every layer of the modern technology stack.</p>
       </div>
+      <div class="products-grid" id="products-grid"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section contact" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">05 / Get In Touch</span>
-      <h2>Close the loop with our sourcing desk</h2>
-      <p>Connect with our expert technology sourcing agents to handle procurement cycles, custom volume pricing, corporate gifting setups, and secure end-to-end global shipments.</p>
-      <div class="divider"></div>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-stack">
-        <div class="contact-card">
-          <span class="eyebrow">Corporate Office Desk</span>
-          <h3>Visit Pearl IT Solutions</h3>
-          <div class="contact-row"><span class="k">PHONE</span><span><a href="tel:+919986861250">+91-9986861250</a></span></div>
-          <div class="contact-row"><span class="k">EMAIL</span><span><a href="mailto:sales@pearlitsolutions.in">sales@pearlitsolutions.in</a></span></div>
-          <div class="contact-row"><span class="k">ADDRESS</span><span>Lead Tech It World, Welcome Plaza, 4/5-1, Shop No 4/18, 3rd Floor, PR Lane, Sadar Patrappa Rd, 3rd Cross, Bengaluru, Karnataka 560002</span></div>
-          <div class="contact-row"><span class="k">BDM</span><span>Mahamudul H. · <a href="tel:+918217774250">+91-8217774250</a></span></div>
-        </div>
-        <div class="contact-card map-card">
-          <span class="eyebrow">Location Map</span>
-          <iframe
-            class="map-frame"
-            title="Pearl IT Solutions office location"
-            src="https://www.google.com/maps?q=Lead%20Tech%20It%20World%2C%20Welcome%20Plaza%20%2C%204%2F5-1%2C%20Shop%20No%204%2F18%2C%203rd%20floor%20%2C%20PR%20lane%2C%20Sadar%20Patrappa%20Rd%2C%203rd%20Cross%2C%20Bengaluru%2C%20Karnataka%20560002&z=15&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <section class="section" id="brands" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill">Brands</span>
+        <h2>Authorized Distribution Partners</h2>
+        <p>Supplying genuine products from globally trusted technology brands.</p>
       </div>
-      <div class="contact-card contact-form-card">
-        <div class="contact-form-copy">
-          <span class="eyebrow">Contact Us</span>
-          <h3>Request a quote or consultation</h3>
-          <p class="contact-form-note">Share your procurement requirements and our sourcing desk will respond within one business day.</p>
-        </div>
-        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    </div>
+    <div class="brands-wrap reveal">
+      <div class="marquee" id="brands-marquee"></div>
+    </div>
+  </section>
+
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill">Industries We Serve</span>
+        <h2>Trusted across every sector of India's economy.</h2>
+      </div>
+      <div class="industries-grid" id="industries-grid"></div>
+    </div>
+  </section>
+
+  <section class="section process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill" style="background:rgba(255,255,255,0.1);color:#fff">Enterprise Procurement Process</span>
+        <h2 style="color:#fff">From enquiry to delivery, engineered for speed.</h2>
+      </div>
+      <div class="process-grid" id="process-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="counters-grid reveal">
+        <div><div class="counter-value" data-count="500" data-suffix="+">0<span class="suffix">+</span></div><div class="counter-label">Business Clients</div></div>
+        <div><div class="counter-value" data-count="1000" data-suffix="+">0<span class="suffix">+</span></div><div class="counter-label">Products Delivered</div></div>
+        <div><div class="counter-value" data-count="100" data-suffix="+">0<span class="suffix">+</span></div><div class="counter-label">Enterprise Projects</div></div>
+        <div><div class="counter-value" data-count="50" data-suffix="+">0<span class="suffix">+</span></div><div class="counter-label">Technology Partners</div></div>
+        <div class="counter-pan"><div class="counter-value">Pan<span class="suffix">India</span></div><div class="counter-label">Distribution Network</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section import" id="import">
+    <div class="container import-grid reveal">
+      <div class="import-image">
+        <img src="assets/import-procurement.jpg" alt="Global import and procurement network" loading="lazy" width="1200" height="800">
+      </div>
+      <div class="import-copy">
+        <span class="eyebrow-pill">Import &amp; Special Procurement</span>
+        <h2 class="text-balance">Need a Product Not Available in India?</h2>
+        <p>Pearl IT Solutions specializes in international sourcing and procurement of hard-to-find electronics, enterprise hardware and specialized technology products.</p>
+        <p>Whether it's an end-of-life component, enterprise storage system or custom requirement, we source it globally and deliver efficiently.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:2rem">Request Custom Procurement <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="teaser">
+    <img src="assets/networking.jpg" alt="Enterprise networking equipment" loading="lazy" width="1200" height="800">
+    <div class="teaser-overlay">
+      <div>
+        <h2 class="text-balance">Genuine products. Authorized channels. Pan-India delivery.</h2>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem">Start a Conversation <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill">Testimonials</span>
+        <h2>What our clients say.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card card-hover reveal">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote>Our procurement became effortless with Pearl IT Solutions.</blockquote>
+          <div class="testimonial-meta"><strong>Head of IT</strong><span>Manufacturing Enterprise</span></div>
+        </article>
+        <article class="testimonial-card card-hover reveal">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote>Competitive pricing and genuine products every time.</blockquote>
+          <div class="testimonial-meta"><strong>Procurement Lead</strong><span>System Integrator</span></div>
+        </article>
+        <article class="testimonial-card card-hover reveal">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote>Reliable partner for enterprise hardware sourcing.</blockquote>
+          <div class="testimonial-meta"><strong>CTO</strong><span>SaaS Company</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-pill">Contact</span>
+        <h2>Let's build your IT infrastructure together.</h2>
+        <p>Tell us about your requirement and our enterprise team will get back within one business day.</p>
+      </div>
+      <div class="contact-layout reveal">
+        <form class="contact-form-wrap" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="ebbf82ba-b774-450d-a384-fe50e10a09a6">
           <input type="hidden" name="subject" value="New inquiry from Pearl IT Solutions website">
           <input type="hidden" name="from_name" value="Pearl IT Solutions Website">
-          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
-
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@company.com" required>
-            </div>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form-grid two">
+            <div class="form-field"><label for="name">Full Name <span class="req">*</span></label><input id="name" name="name" placeholder="Your name" required></div>
+            <div class="form-field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" placeholder="you@company.com" required></div>
+            <div class="form-field"><label for="phone">Phone <span class="req">*</span></label><input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required></div>
+            <div class="form-field"><label for="company">Company</label><input id="company" name="company" placeholder="Company name"></div>
           </div>
-
-          <div class="form-row">
-            <div class="form-field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
-            </div>
-            <div class="form-field">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Company name">
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="inquiry_type">Inquiry Type</label>
+          <div class="form-field" style="margin-top:1rem">
+            <label for="inquiry_type">Inquiry Type <span class="req">*</span></label>
             <select id="inquiry_type" name="inquiry_type" required>
               <option value="" disabled selected>Select an option</option>
               <option value="Procurement Quote">Procurement Quote</option>
@@ -1004,76 +1234,450 @@
               <option value="General Inquiry">General Inquiry</option>
             </select>
           </div>
-
-          <div class="form-field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about products, quantities, timelines, or delivery location..." required></textarea>
-          </div>
-
-          <button type="submit" class="form-submit" id="form-submit">Send Inquiry</button>
+          <div class="form-field" style="margin-top:1rem"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" rows="5" placeholder="Tell us about products, quantities, timelines, or delivery location..." required></textarea></div>
+          <button type="submit" class="btn btn-navy" id="form-submit" style="margin-top:1.5rem">Send Inquiry <i data-lucide="arrow-right" style="width:1rem;height:1rem"></i></button>
           <p class="form-result" id="form-result" aria-live="polite"></p>
         </form>
+        <div class="contact-side">
+          <div class="info-card">
+            <h3>Pearl IT Solutions</h3>
+            <div class="info-rows">
+              <div class="info-row"><div class="info-row-icon"><i data-lucide="mail" style="width:1rem;height:1rem"></i></div><div><kbd>Email</kbd><div><a href="mailto:sales@pearlitsolutions.in">sales@pearlitsolutions.in</a></div></div></div>
+              <div class="info-row"><div class="info-row-icon"><i data-lucide="globe-2" style="width:1rem;height:1rem"></i></div><div><kbd>Website</kbd><div><a href="https://www.pearlitsolutions.in">www.pearlitsolutions.in</a></div></div></div>
+              <div class="info-row"><div class="info-row-icon"><i data-lucide="phone" style="width:1rem;height:1rem"></i></div><div><kbd>Phone</kbd><div><a href="tel:+919986861250">+91 9986861250</a></div></div></div>
+              <div class="info-row"><div class="info-row-icon"><i data-lucide="map-pin" style="width:1rem;height:1rem"></i></div><div><kbd>Address</kbd><div>No. 4/5-1, 4/18, Welcome Plaza, 3rd Floor,<br>P.R. Lane, Bangalore – 560002,<br>Karnataka, India</div></div></div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe title="Pearl IT Solutions location" src="https://www.google.com/maps?q=Welcome+Plaza+P.R.+Lane+Bangalore+560002&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<footer>
-  <div class="wrap"><img class="footer-logo" src="data:image/png;base64,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" alt="Pearl IT Solutions">PEARL IT SOLUTIONS · Business Portfolio 2026 · www.pearlitsolutions.in</div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home"><img src="assets/favicon.png" alt="Pearl IT Solutions" style="height:2.5rem;filter:brightness(0) invert(1)"></a>
+      <p>One of India's trusted B2B distributors of genuine IT hardware, enterprise infrastructure and custom procurement.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:1rem;height:1rem"></i></a>
+        <a href="mailto:sales@pearlitsolutions.in" aria-label="Email"><i data-lucide="mail" style="width:1rem;height:1rem"></i></a>
+        <a href="tel:+919986861250" aria-label="Phone"><i data-lucide="phone" style="width:1rem;height:1rem"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Offerings</h4>
+      <ul class="footer-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#import">Import Procurement</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul class="footer-links">
+        <li>sales@pearlitsolutions.in</li>
+        <li>+91 9986861250</li>
+        <li>Welcome Plaza, Bangalore – 560002</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div>© <span id="year"></span> Pearl IT Solutions. All rights reserved.</div>
+    <div>Authorized IT Distribution • Bangalore, India</div>
+  </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script>
 (function () {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var PRODUCTS = [
+    { icon: 'monitor', title: 'IT Hardware', items: ['Servers', 'Storage', 'Workstations', 'Desktops', 'Laptops', 'Monitors', 'Printers', 'UPS', 'Components', 'Accessories'] },
+    { icon: 'cpu', title: 'Computer Components', items: ['Processors', 'Motherboards', 'Graphics Cards', 'RAM', 'SSD', 'Hard Drives', 'Cabinets', 'Power Supplies', 'Cooling Solutions', 'Networking Cards'] },
+    { icon: 'server', title: 'Enterprise Infrastructure', items: ['Rack Servers', 'Storage Arrays', 'NAS', 'SAN', 'Virtualization', 'Backup Solutions', 'Cloud Infrastructure'] },
+    { icon: 'network', title: 'Networking', items: ['Switches', 'Routers', 'Firewalls', 'Access Points', 'Structured Cabling', 'Wireless Solutions', 'Network Security'] },
+    { icon: 'shield', title: 'Software Licensing', items: ['Microsoft', 'Operating Systems', 'Productivity Suites', 'Antivirus', 'Backup', 'Virtualization', 'Enterprise Software'] },
+    { icon: 'globe-2', title: 'Import & Special Procurement', items: ['International sourcing', 'End-of-life products', 'Enterprise hardware', 'Custom electronic procurement', 'Special customer requirements'] }
+  ];
+
+  var BRANDS = [
+    { name: 'SanDisk', slug: 'sandisk' },
+    { name: 'Western Digital', slug: 'westerndigital' },
+    { name: 'NVIDIA', slug: 'nvidia' },
+    { name: 'Intel', slug: 'intel' },
+    { name: 'HP', slug: 'hp' },
+    { name: 'Lenovo', slug: 'lenovo' },
+    { name: 'Samsung', slug: 'samsung' },
+    { name: 'ASUS', slug: 'asus' },
+    { name: 'AMD', slug: 'amd' },
+    { name: 'Logitech', slug: 'logitech' },
+    { name: 'Transcend', slug: '' },
+    { name: 'Colorful', slug: '' },
+    { name: 'Kodak', slug: 'kodak' },
+    { name: 'Miphi', slug: '' }
+  ];
+
+  var ASSET_BASE = 'https://lead-tech-it-world.leadtech07.chatgpt.site';
+
+  var PORTFOLIO = [
+    {
+      icon: 'monitor',
+      category: 'Laptops, Desktops & Workstations',
+      blurb: 'Business laptops, desktops and workstation systems for every scale.',
+      items: [
+        { name: 'HP', icon: '/brand-logos/hp.webp' },
+        { name: 'Lenovo', icon: '/brand-logos/lenovo.png' },
+        { name: 'Dell Technologies', icon: '/brand-logos/dell-technologies.png' },
+        { name: 'Acer', icon: '/brand-logos/acer.png' },
+        { name: 'ASUS', icon: '/brand-logos/asus.png' },
+        { name: 'Apple', icon: '/brand-logos/apple.png' },
+        { name: 'MSI', icon: '/brand-logos/msi.png' },
+        { name: 'Samsung', icon: '/brand-logos/samsung.jpg' },
+        { name: 'Microsoft Surface', icon: '/brand-logos/microsoft-surface.png' }
+      ]
+    },
+    {
+      icon: 'server',
+      category: 'Servers, AI & Enterprise Computing',
+      blurb: 'Rack, tower and AI-ready enterprise server platforms.',
+      items: [
+        { name: 'HPE', icon: '/brand-logos/hpe.png' },
+        { name: 'Supermicro', icon: '/brand-logos/supermicro.webp' },
+        { name: 'IBM', icon: '/brand-logos/ibm.png' }
+      ]
+    },
+    {
+      icon: 'cpu',
+      category: 'Processors',
+      blurb: 'Desktop, workstation and server CPUs.',
+      items: [
+        { name: 'Intel', icon: '/brand-logos/intel.png' },
+        { name: 'AMD', icon: '/brand-logos/amd.png' }
+      ]
+    },
+    {
+      icon: 'memory-stick',
+      category: 'Memory (RAM)',
+      blurb: 'DDR4 / DDR5, ECC and gaming memory modules.',
+      items: [
+        { name: 'TEAMGROUP / T-FORCE', icon: '/brand-logos/teamgroup-tforce.jpg' },
+        { name: 'Samsung', icon: '/brand-logos/samsung.jpg' },
+        { name: 'SK hynix', icon: '/brand-logos/sk-hynix.webp' },
+        { name: 'Micron', icon: '/brand-logos/micron.webp' },
+        { name: 'Patriot / Viper', icon: '/brand-logos/patriot-viper.png' },
+        { name: 'EVM', icon: '/brand-logos/evm.png' },
+        { name: 'Simmtronics', icon: '/brand-logos/simmtronics.png' },
+        { name: 'Consistent', icon: null }
+      ]
+    },
+    {
+      icon: 'hard-drive',
+      category: 'Hard Drives & External Storage',
+      blurb: 'Internal, external and portable storage drives.',
+      items: [
+        { name: 'Western Digital', icon: '/brand-logos/western-digital.png' },
+        { name: 'Seagate', icon: '/brand-logos/seagate.jpeg' },
+        { name: 'Toshiba', icon: '/brand-logos/toshiba.png' },
+        { name: 'LaCie', icon: '/brand-logos/lacie.png' },
+        { name: 'Transcend', icon: '/brand-logos/transcend.jpg' },
+        { name: 'ADATA', icon: '/brand-logos/adata.png' },
+        { name: 'G-Technology / SanDisk Professional', icon: '/brand-logos/g-technology.png' }
+      ]
+    },
+    {
+      icon: 'microchip',
+      category: 'Graphics Cards',
+      blurb: 'Gaming, workstation and AI accelerators.',
+      items: [
+        { name: 'NVIDIA', icon: '/brand-logos/nvidia.webp' },
+        { name: 'ASUS', icon: '/brand-logos/asus.png' },
+        { name: 'MSI', icon: '/brand-logos/msi.png' },
+        { name: 'GIGABYTE', icon: '/brand-logos/gigabyte.webp' },
+        { name: 'ZOTAC', icon: '/brand-logos/zotac.png' },
+        { name: 'Inno3D', icon: '/brand-logos/inno3d.png' },
+        { name: 'GALAX', icon: '/brand-logos/galax.svg' },
+        { name: 'PNY', icon: '/brand-logos/pny.png' },
+        { name: 'Colorful', icon: '/brand-logos/colorful.webp' }
+      ]
+    },
+    {
+      icon: 'database',
+      category: 'NAS & Data Storage Solutions',
+      blurb: 'Network attached storage and enterprise data appliances.',
+      items: [
+        { name: 'Synology', icon: '/brand-logos/synology.png' },
+        { name: 'QNAP', icon: '/brand-logos/qnap.png' },
+        { name: 'NetApp', icon: '/brand-logos/netapp.webp' },
+        { name: 'QSAN', icon: '/brand-logos/qsan.jpg' },
+        { name: 'ASUSTOR', icon: '/brand-logos/asustor.jpg' }
+      ]
+    },
+    {
+      icon: 'network',
+      category: 'Networking, Wi-Fi, Switching & Firewalls',
+      blurb: 'Enterprise switching, routing, wireless and security.',
+      items: [
+        { name: 'Cisco', icon: '/brand-logos/cisco.jpg' },
+        { name: 'HPE Aruba Networking', icon: '/brand-logos/aruba.png' },
+        { name: 'Ubiquiti', icon: '/brand-logos/ubiquiti.jpeg' },
+        { name: 'TP-Link', icon: '/brand-logos/tplink.jpeg' },
+        { name: 'D-Link', icon: '/brand-logos/dlink.png' }
+      ]
+    },
+    {
+      icon: 'printer',
+      category: 'Printers, Scanners & Computer Peripherals',
+      blurb: 'Office printers, scanners, labels and input devices.',
+      items: [
+        { name: 'Canon', icon: '/brand-logos/canon.png' },
+        { name: 'Epson', icon: '/brand-logos/epson.png' },
+        { name: 'Brother', icon: '/brand-logos/brother.png' },
+        { name: 'Xerox', icon: '/brand-logos/xerox.jpeg' },
+        { name: 'TVS Electronics', icon: '/brand-logos/tvs-electronics.jpeg' },
+        { name: 'Zebra Technologies', icon: '/brand-logos/zebra.jpeg' },
+        { name: 'Logitech', icon: '/brand-logos/logitech.webp' },
+        { name: 'TSC Printronix Auto ID', icon: '/brand-logos/tsc.png' },
+        { name: 'Wacom', icon: '/brand-logos/wacom.jpeg' }
+      ]
+    },
+    {
+      icon: 'layout-grid',
+      category: 'Monitors & PC Components',
+      blurb: 'Displays, cabinets, cooling and PC build components.',
+      items: [
+        { name: 'LG', icon: '/brand-logos/lg.jpeg' },
+        { name: 'BenQ', icon: '/brand-logos/benq.jpeg' },
+        { name: 'ViewSonic', icon: '/brand-logos/viewsonic.jpeg' },
+        { name: 'AOC', icon: '/brand-logos/aoc.png' },
+        { name: 'Philips', icon: '/brand-logos/philips.png' },
+        { name: 'Zebronics', icon: '/brand-logos/zebronics.png' },
+        { name: 'Ant Esports', icon: '/brand-logos/ant-esports.png' },
+        { name: 'Cooler Master', icon: '/brand-logos/cooler-master.jpeg' },
+        { name: 'Corsair', icon: '/brand-logos/corsair.jpeg' },
+        { name: 'ZOTAC', icon: '/brand-logos/zotac.png' }
+      ]
+    },
+    {
+      icon: 'battery-charging',
+      category: 'UPS, Power Backup & Electrical Infrastructure',
+      blurb: 'UPS systems, power backup and electrical protection.',
+      items: [
+        { name: 'APC by Schneider Electric', icon: '/brand-logos/apc.jpeg' },
+        { name: 'Vertiv', icon: '/brand-logos/vertiv.png' },
+        { name: 'Eaton', icon: '/brand-logos/eaton.png' },
+        { name: 'Delta Electronics', icon: '/brand-logos/delta-electronics.jpeg' },
+        { name: 'Numeric', icon: '/brand-logos/numeric.jpeg' },
+        { name: 'Microtek', icon: '/brand-logos/microtek.png' },
+        { name: 'V-Guard', icon: '/brand-logos/v-guard.png' }
+      ]
+    }
+  ];
+
+  var INDUSTRIES = [
+    { icon: 'cpu', name: 'Information Technology' },
+    { icon: 'factory', name: 'Manufacturing' },
+    { icon: 'graduation-cap', name: 'Education' },
+    { icon: 'heart-pulse', name: 'Healthcare' },
+    { icon: 'landmark', name: 'Government' },
+    { icon: 'shopping-bag', name: 'Retail' },
+    { icon: 'banknote', name: 'Banking & Finance' },
+    { icon: 'building-2', name: 'SMEs' },
+    { icon: 'boxes', name: 'System Integrators' },
+    { icon: 'package', name: 'Resellers' },
+    { icon: 'users', name: 'Corporate Enterprises' },
+    { icon: 'server', name: 'Enterprise IT' }
+  ];
+
+  var STEPS = [
+    'Requirement Analysis', 'Product Consultation', 'Sourcing', 'Competitive Quotation',
+    'Procurement', 'Quality Verification', 'Pan India Delivery', 'Post Sales Support'
+  ];
+
+  function brandLogo(name, slug) {
+    if (!slug) return '<span>' + name + '</span>';
+    return '<img src="https://cdn.simpleicons.org/' + slug + '/0a2c6d" alt="' + name + ' logo" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement(\'span\'),{textContent:\'' + name.replace(/'/g, "\\'") + '\'}))">';
+  }
+
+  function portfolioBrandTile(brand) {
+    var logo = brand.icon
+      ? '<span class="portfolio-item-logo"><img src="' + ASSET_BASE + brand.icon + '" alt="" loading="lazy" onerror="this.parentElement.remove()"></span>'
+      : '';
+    var textOnly = brand.icon ? '' : ' text-only';
+    return '<div class="portfolio-item card-hover' + textOnly + '">' + logo + '<span class="portfolio-item-name">' + brand.name + '</span></div>';
+  }
+
+  function chevron() {
+    return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>';
+  }
+
+  var productsGrid = document.getElementById('products-grid');
+  productsGrid.innerHTML = PRODUCTS.map(function (cat) {
+    return '<article class="product-card card-hover reveal">' +
+      '<div class="product-head"><div class="product-icon"><i data-lucide="' + cat.icon + '"></i></div><h3>' + cat.title + '</h3></div>' +
+      '<ul class="product-list">' + cat.items.map(function (item) {
+        return '<li>' + chevron() + '<span>' + item + '</span></li>';
+      }).join('') + '</ul></article>';
+  }).join('');
+
+  var brandsMarquee = document.getElementById('brands-marquee');
+  var brandTiles = BRANDS.concat(BRANDS).map(function (brand) {
+    return '<div class="brand-tile">' + brandLogo(brand.name, brand.slug) + '</div>';
+  }).join('');
+  brandsMarquee.innerHTML = brandTiles;
+
+  var industriesGrid = document.getElementById('industries-grid');
+  industriesGrid.innerHTML = INDUSTRIES.map(function (item) {
+    return '<article class="industry-card card-hover reveal"><div class="industry-icon"><i data-lucide="' + item.icon + '"></i></div><strong>' + item.name + '</strong></article>';
+  }).join('');
+
+  var processGrid = document.getElementById('process-grid');
+  processGrid.innerHTML = STEPS.map(function (step, idx) {
+    return '<article class="process-step card-hover reveal"><div class="num">' + String(idx + 1).padStart(2, '0') + '</div><strong>' + step + '</strong></article>';
+  }).join('');
+
+  var activePortfolio = 0;
+  var portfolioRail = document.getElementById('portfolio-rail');
+  var portfolioPanel = document.getElementById('portfolio-panel');
+
+  function renderPortfolio(index) {
+    activePortfolio = index;
+    var current = PORTFOLIO[index];
+    portfolioRail.innerHTML = PORTFOLIO.map(function (cat, i) {
+      return '<button type="button" class="portfolio-tab' + (i === index ? ' active' : '') + '" data-index="' + i + '" role="tab" aria-selected="' + (i === index) + '">' +
+        '<span class="portfolio-tab-icon"><i data-lucide="' + cat.icon + '"></i></span>' +
+        '<span><span style="display:block;font-weight:600;font-size:0.875rem">' + cat.category + '</span><small>' + cat.items.length + ' brands</small></span></button>';
+    }).join('');
+    portfolioPanel.innerHTML =
+      '<div class="portfolio-panel-head"><div><h3>' + current.category + '</h3><p class="blurb">' + current.blurb + '</p></div><span class="status-pill">In active distribution</span></div>' +
+      '<div class="portfolio-items">' + current.items.map(portfolioBrandTile).join('') + '</div>' +
+      '<div class="portfolio-note"><i data-lucide="check-circle-2" style="width:1rem;height:1rem"></i> Genuine products with manufacturer warranty and pan-India delivery.</div>';
+    lucide.createIcons();
+    portfolioRail.querySelectorAll('.portfolio-tab').forEach(function (btn) {
+      btn.addEventListener('click', function () { renderPortfolio(Number(btn.dataset.index)); });
+    });
+  }
+  renderPortfolio(0);
+
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+
+  var menuToggle = document.getElementById('menu-toggle');
+  var mobileNav = document.getElementById('mobile-nav');
+  menuToggle.addEventListener('click', function () {
+    var open = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open);
+    menuToggle.innerHTML = open
+      ? '<i data-lucide="x" style="width:1.5rem;height:1.5rem"></i>'
+      : '<i data-lucide="menu" style="width:1.5rem;height:1.5rem"></i>';
+    lucide.createIcons();
+  });
+  mobileNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '<i data-lucide="menu" style="width:1.5rem;height:1.5rem"></i>';
+      lucide.createIcons();
+    });
+  });
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  document.querySelectorAll('.counter-value[data-count]').forEach(function (el) {
+    var target = Number(el.dataset.count);
+    var suffix = el.dataset.suffix || '';
+    var started = false;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting || started) return;
+        started = true;
+        var start = performance.now();
+        function step(now) {
+          var p = Math.min(1, (now - start) / 1600);
+          var eased = 1 - Math.pow(1 - p, 3);
+          var value = Math.floor(eased * target);
+          el.innerHTML = value.toLocaleString('en-IN') + '<span class="suffix">' + suffix + '</span>';
+          if (p < 1) requestAnimationFrame(step);
+          else el.innerHTML = target.toLocaleString('en-IN') + '<span class="suffix">' + suffix + '</span>';
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.3 });
+    observer.observe(el);
+  });
+
   var form = document.getElementById('contact-form');
   var result = document.getElementById('form-result');
   var submitBtn = document.getElementById('form-submit');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  if (!form) return;
+      var accessKey = form.querySelector('[name="access_key"]').value;
+      if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
+        result.textContent = 'Please add your Web3Forms access key before submitting.';
+        result.className = 'form-result show error';
+        return;
+      }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+      submitBtn.disabled = true;
+      result.textContent = 'Sending your inquiry...';
+      result.className = 'form-result show';
 
-    var accessKey = form.querySelector('[name="access_key"]').value;
-    if (accessKey === 'YOUR_ACCESS_KEY_HERE') {
-      result.textContent = 'Please add your Web3Forms access key before submitting.';
-      result.className = 'form-result error';
-      return;
-    }
-
-    submitBtn.disabled = true;
-    result.textContent = 'Sending your inquiry...';
-    result.className = 'form-result';
-
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: JSON.stringify(Object.fromEntries(new FormData(form)))
-    })
-      .then(function (response) {
-        return response.json().then(function (data) {
-          if (response.ok) {
-            result.textContent = 'Thank you. Our sourcing desk will get back to you shortly.';
-            result.className = 'form-result success';
-            form.reset();
-          } else {
-            result.textContent = data.message || 'Something went wrong. Please try again or email sales@pearlitsolutions.in.';
-            result.className = 'form-result error';
-          }
-        });
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
       })
-      .catch(function () {
-        result.textContent = 'Unable to send right now. Please email sales@pearlitsolutions.in directly.';
-        result.className = 'form-result error';
-      })
-      .finally(function () {
-        submitBtn.disabled = false;
-      });
-  });
+        .then(function (response) {
+          return response.json().then(function (data) {
+            if (response.ok) {
+              result.textContent = 'Thank you. Our sourcing desk will get back to you shortly.';
+              result.className = 'form-result show success';
+              form.reset();
+            } else {
+              result.textContent = data.message || 'Something went wrong. Please try again or email sales@pearlitsolutions.in.';
+              result.className = 'form-result show error';
+            }
+          });
+        })
+        .catch(function () {
+          result.textContent = 'Unable to send right now. Please email sales@pearlitsolutions.in directly.';
+          result.className = 'form-result show error';
+        })
+        .finally(function () { submitBtn.disabled = false; });
+    });
+  }
+
+  lucide.createIcons();
 })();
 </script>
-
 </body>
 </html>
